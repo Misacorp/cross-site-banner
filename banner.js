@@ -1,7 +1,5 @@
 var url = 'https://misacorp.github.io/cross-site-banner/content.html';
-var content = ajax(url, 'get',  function(obj) { updatePage(obj.responseText) });
-
-updatePage(content);
+ajax(url, 'get',  function(obj) { updatePage(obj.responseText) });
 
 function updatePage(data) {
     document.body.innerHTML = data + document.body.innerHTML;
